@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Fishing ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SCREEN 1 -->
+<div id="screen1" class="screen active">
+  <div class="overlay">
+    <h1>Wanna fish?</h1>
+    <button onclick="startFishing()">Of course u do</button>
+  </div>
+</div>
+
+<!-- SCREEN 2 -->
+<div id="screen2" class="screen">
+  <div class="fish-container">
+    <img src="images/fish1.png" class="fish" onclick="catchFish(1)">
+    <img src="images/fish2.png" class="fish" onclick="catchFish(2)">
+    <img src="images/fish3.png" class="fish" onclick="catchFish(3)">
+    <img src="images/fish4.png" class="fish" onclick="catchFish(4)">
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- FINAL SCREEN -->
+<div id="finalScreen" class="hidden">
+  <div class="final-content">
+    <h1>You caught them all! 🎣</h1>
+    <p>Happy birthday ❤️</p>
+    <button onclick="restartGame()">Play again</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

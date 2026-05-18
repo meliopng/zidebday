@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* SCREENS */
+.screen {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* BACKGROUNDS */
+#screen1 {
+  background: url("images/lake.jpg") center/cover no-repeat;
+}
+
+#screen2 {
+  background: url("images/underwater.jpg") center/cover no-repeat;
+}
+
+/* TEXT */
+.overlay {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  color: rgb(25, 38, 63);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 5%;
+  background-color: rgb(214, 214, 244);
+}
+
+/* FISH */
+.fish-container {
+  position: relative;
+  height: 100%;
+}
+
+.fish {
+  width: 150px;
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s;
+  animation: swim 6s infinite linear;
+}
+
+.fish:nth-child(1) {
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+
+.fish:nth-child(2) {
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.fish:nth-child(3) {
+  animation-duration: 7s;
+  animation-delay: 0s;
+}
+
+.fish:nth-child(4) {
+  animation-duration: 11s;
+  animation-delay: 0s;
+}
+
+@keyframes swim {
+  0% {
+    transform: translateX(0) scaleX(-1);
+  }
+
+  49% {
+    transform: translateX(100px) scaleX(-1);
+  }
+
+  50% {
+    transform: translateX(100px) scaleX(1); /* flip */
+  }
+
+  99% {
+    transform: translateX(0px) scaleX(1);
+  }
+
+  100% {
+    transform: translateX(0px) scaleX(-1); /* flip back */
+  }
+}
+
+/* positions */
+.fish:nth-child(1) { top: 20%; left: 20%; }
+.fish:nth-child(2) { top: 50%; left: 60%; }
+.fish:nth-child(3) { top: 30%; left: 75%; }
+.fish:nth-child(4) { top: 65%; left: 30%; }
+
+/* wiggle */
+@keyframes wiggle {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* MODAL */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#finalScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.final-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
