@@ -19,11 +19,11 @@ body {
 
 /* BACKGROUNDS */
 #screen1 {
-  background: url("images/lake.jpg") center/cover no-repeat;
+  background: url("lake.jpg") center/cover no-repeat;
 }
 
 #screen2 {
-  background: url("images/underwater.jpg") center/cover no-repeat;
+  background: url("underwater.jpg") center/cover no-repeat;
 }
 
 /* TEXT */
