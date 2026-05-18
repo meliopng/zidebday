@@ -146,7 +146,7 @@ button {
 .modal-content img {
   width: 100%;
   height: auto;
-  max-height: 60vh;
+  max-height: 50vh;
   object-fit: contain;
 }
 
