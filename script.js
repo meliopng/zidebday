@@ -21,7 +21,7 @@ function catchFish(index) {
   let content = "";
 
   if (index === 1) {
-    content = `<img src="images/card.png" style="width:100%">`;
+    content = `<img src="card.png" style="width:100%">`;
   }
   if (index === 2) {
     content = `<p>Happy birthday! 🎂<br><br><span style="font-size: 20px;">
@@ -38,13 +38,13 @@ function catchFish(index) {
                   and I'll gift it to you on steam :)<br><br>
                   <span style="font-size: 15px;">(I was just gonna gift it to u as a normal
                   surprise but I wanna make sure it's one u want)</span></p>
-                  <img src="images/present.gif" style="width:90%">`;
+                  <img src="present.gif" style="width:90%">`;
   }
   if (index === 4) {
     content = `<p>I'm also giving u a pass to do anything you want for a day<br>
                   You can "use" it whenever, and we can do whatever
                   you want that day with zero complaints from me ❤️</p>
-                  <img src="images/pass.jpg" style="width:95%">`;
+                  <img src="pass.jpg" style="width:95%">`;
   }
 
   openModal(content);
